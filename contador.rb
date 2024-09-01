@@ -27,12 +27,9 @@ class AnalizaTexto
 end
 
 analisis = AnalizaTexto.new("Este texto es un texto como este")
-puts analisis.cuenta
-analisis.cuenta.each {|key,value| puts  " palabra #{key}, veces #{value}" }
-
-
-analisis.cuenta.each {|key,value| puts  " palabra #{key}, veces #{value}" }
-
 puts analisis
+puts analisis.cuenta
+
 analisis.texto = "Nuevo texto nuevo calculo nuevo conteo"
+puts analisis
 puts analisis.cuenta
