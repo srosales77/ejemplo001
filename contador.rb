@@ -16,6 +16,10 @@ class AnalizaTexto
         end
         cuenta
     end
+
+    def to_s
+        "Objeto con texto :\" #{@texto}\""
+    end
 end
 
 analisis = AnalizaTexto.new("Este texto es un texto como este")
@@ -25,3 +29,5 @@ puts analisis.cuenta
 
 
 analisis.cuenta.each {|key,value| puts  " palabra #{key}, veces #{value}" }
+
+puts analisis
