@@ -4,6 +4,10 @@ class AnalizaTexto
         @texto = texto
     end
 
+    def texto=(nuevo_texto)
+        @texto = nuevo_texto
+    end
+
     def cadena_palabras
         @texto.downcase.scan(/[\w]+/)
     end
@@ -23,11 +27,12 @@ class AnalizaTexto
 end
 
 analisis = AnalizaTexto.new("Este texto es un texto como este")
-
-
 puts analisis.cuenta
+analisis.cuenta.each {|key,value| puts  " palabra #{key}, veces #{value}" }
 
 
 analisis.cuenta.each {|key,value| puts  " palabra #{key}, veces #{value}" }
 
 puts analisis
+analisis.texto = "Nuevo texto nuevo calculo nuevo conteo"
+puts analisis.cuenta
